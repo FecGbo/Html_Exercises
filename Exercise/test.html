@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .f_container {
+        display: flex;
+        width: 80%; /* Set container width */
+        height: 80%; /* Set container height */
+      }
+      .f_box {
+        flex: 1;
+        background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+      }
+      .right_box {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping */
+      }
+      .right_box div {
+        width: 50%; /* Each box occupies 50% width of the right section */
+        height: 50%; /* Each box occupies 50% height of the right section */
+        background: red;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        box-sizing: border-box;
+        border: 3px solid #f0f0f0; /* Optional spacing between boxes */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f_container">
+      <div class="f_box">1</div>
+      <div class="right_box">
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

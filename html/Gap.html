@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex_container {
+        display: flex;
+        background: cyan;
+        height: 200px;
+        width: 100%;
+        gap: 10px;
+        gap: 10px 20px; /*row-gap column gap */
+        row-gap: 10px;
+        column-gap: 10px;
+      }
+      .flex {
+        display: flex;
+        background-color: cyan;
+        height: 200px;
+        width: 100%;
+        gap: 10px 20px;
+        row-gap: 30px;
+        column-gap: 50px;
+      }
+      .flex_item {
+        flex-basis: 20%;
+        background-color: red;
+        width: 100px;
+        margin: 30px;
+        text-align: center;
+
+        letter-spacing: 1px;
+      }
+      .flex_container :nth-child(4) {
+        order: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gap, Row-Gap, Colum-Gap in Flex</h1>
+    <div class="flex_container">
+      <div class="flex_item">Colum 1</div>
+      <div class="flex_item">Colum 2</div>
+      <div class="flex_item">Colum 3</div>
+      <div class="flex_item">Colum 4</div>
+      <div class="flex_item">Colum 5</div>
+      <div class="flex_item">Colum 6</div>
+      <div class="flex_item">Colum 7</div>
+      <div class="flex_item">Colum 8</div>
+    </div>
+    <div class="flex">
+      <div class="flex_item">colum 1</div>
+      <div class="flex_item">Colum 2</div>
+      <div class="flex_item">Colum 3</div>
+      <div class="flex_item">Colum 4</div>
+      <div class="flex_item">Colum 5</div>
+      <div class="flex_item">Colum 6</div>
+      <div class="flex_item">Colum 7</div>
+      <div class="flex_item">Colum 8</div>
+    </div>
+  </body>
+</html>

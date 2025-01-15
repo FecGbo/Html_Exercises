@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+
+        display: flex;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .container {
+        margin: 0 auto;
+        width: 600px;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        background: #5f2c82; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #49a09d,
+          #5f2c82
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #49a09d,
+          #5f2c82
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+        padding: 43px;
+        border-radius: 50px 20px;
+        animation: box 1s;
+        transition: 0.5s;
+      }
+      .card-img {
+        flex: 40%;
+        animation: toRight 1s;
+      }
+      .card-img img {
+        border-radius: 10px;
+        animation-name: toRight;
+        animation-duration: 5s;
+      }
+      .card-body {
+        flex: 60%;
+      }
+      .card-title {
+        color: aqua;
+        animation: toLeft 1.5s;
+      }
+      .card-text {
+        font-size: 20px;
+        padding-top: 10px;
+        animation: toLeft 2s;
+      }
+      @keyframes toRight {
+        0% {
+          transform: translateX(-300px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes toLeft {
+        0% {
+          transform: translateX(300px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes box {
+        0% {
+          transform: translateY(-300px);
+          opacity: 0;
+        }
+        25% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-200px);
+          opacity: 1;
+        }
+        75% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+        80% {
+          transform: translateY(-50px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+      }
+      .container:hover {
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      .container:hover .card-img {
+        transform: rotate(-10deg) scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-img">
+        <img src="../images/seriously.gif" alt="" />
+      </div>
+
+      <div class="card-body">
+        <h1 class="card-title">Jessica</h1>
+        <p class="card-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+          tempore nobis praesentium est placeat repellat vitae error aliquid
+          nemo ad minus officia minima, culpa aspernatur dolorem suscipit!
+          Facere, veniam rem?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

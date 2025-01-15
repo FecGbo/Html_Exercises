@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Positon</title>
+    <style>
+      .container {
+        position: relative;
+        width: 50%;
+      }
+      .topleft {
+        position: absolute;
+        top: 8px;
+        left: 12px;
+        font-size: 20px;
+        color: red;
+      }
+      img {
+        width: 50%;
+        height: auto;
+        opacity: 0.8;
+      }
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        /* background-color: #008cba; */
+        background-image: url("../images/hus.jpg");
+        /* background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; */
+      }
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+      .container:hover .overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="text-align: center">Add some Text on Image</p>
+    <div class="container">
+      <img
+        src="../images/Chat.jpg"
+        alt=""
+        width="20"
+        height="10"
+        class="image"
+      />
+      <div class="topleft">Top left Text</div>
+      <div class="center">Center Text mmmm<:</div>
+
+      <div class="overlay">
+        <div class="text">Hello WOrld!</div>
+      </div>
+    </div>
+  </body>
+</html>

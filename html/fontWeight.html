@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Weight</title>
+    <style>
+      body {
+        text-align: center;
+        font-weight: 600;
+      }
+      .container {
+        margin: 40px auto;
+        padding: 40px 20px;
+        border: 1px solid;
+
+        font-size: 20px;
+        background: gray;
+        width: 400px;
+      }
+      .normal {
+        font-weight: normal;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .lighter {
+        font-weight: lighter;
+      }
+      .bolder {
+        font-weight: bolder;
+      }
+      .parent {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 50px;
+      }
+      .parent p {
+        font-size: initial;
+        color: red;
+      }
+      .foo {
+        color: blue;
+      }
+      .bar {
+        color: aqua;
+      }
+      p {
+        color: red;
+      }
+      .bar p {
+        color: unset;
+      }
+      .block__p--blue {
+        color: blue;
+      }
+      .block__.p--.blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>Font Weight</h3>
+      <div class="container">
+        <p>Text with Font Weight of Parent</p>
+        <p class="normal">This Text is normal</p>
+        <p class="bold">This Text is bold</p>
+        <p class="lighter">This Text is lighter</p>
+        <p class="bolder">This Text is bolder</p>
+      </div>
+    </div>
+    <div class="parent">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+        praesentium est placeat numquam sint accusamus officiis modi, distinctio
+        soluta neque. Natus totam temporibus placeat minima non exercitationem
+        reprehenderit fugit cupiditate?
+      </p>
+    </div>
+    <h1>unset</h1>
+    <div class="foo">
+      <p>lorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrem</p>
+    </div>
+    <div class="bar">
+      <p>barrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</p>
+    </div>
+    <div class="block">
+      <h1>block type</h1>
+      <p class="text">
+        adjlkad adjfl lkdjfl jadlfj0
+        <span class="blue">adkfja lkjfkldsaj </span>
+      </p>
+    </div>
+  </body>
+</html>

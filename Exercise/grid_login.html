@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        background-color: aqua;
+      }
+
+      .left {
+        flex: 50%;
+        place-content: center;
+        text-align: center;
+        background-color: lightblue;
+        clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+        /* background-color: aqua; */
+      }
+
+      .right {
+        flex: 50%;
+        /* background-color: gold; */
+
+        place-content: center;
+        text-align: center;
+      }
+      .right input {
+        margin: 20px;
+        border-radius: 23px;
+        padding: 10px;
+        width: 34%;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+      }
+      button {
+        background-color: greenyellow;
+        border-radius: 30px;
+        padding: 10px;
+        width: 15%;
+      }
+      .img_container {
+        margin-top: 13px;
+      }
+      .left h1,
+      p {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>My logo</h1>
+        <br />
+        <p>Made with &hearts; by me</p>
+      </div>
+      <div class="right">
+        <form action="">
+          <h1>LOGIN</h1>
+          <input type="text" placeholder="Username" /><br />
+          <input
+            type="password"
+            name="password"
+            id=""
+            placeholder="password"
+          /><br />
+          <a href="#">Forget password?</a><br /><br />
+          <button type="button">Login</button>
+          <br /><br />
+          <a href="#">Didn't have an account? sign in</a>
+          <br /><br />
+          <p style="color: white; font-size: large">or</p>
+          <div class="img_container">
+            <img src="../images/seriously.gif" alt="" width="50" height="50" />
+            <img src="../images/humm.jpg" alt="" width="50" height="50" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      margin: 10px auto;
+      border: 3px solid black;
+      border-radius: 2%;
+      background-color: gray;
+      position: relative;
+      width: 500px;
+      height: 400px;
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+        rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+        rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    }
+    .box {
+      width: 200px;
+      height: 70px;
+      position: absolute;
+      border-radius: 10px;
+      padding: 10px;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      transition: 0.2s;
+    }
+
+    #box__span1 {
+      background-color: blue;
+      top: 80px;
+      left: 30px;
+    }
+    #box__span2 {
+      background-color: red;
+      top: 140px;
+      left: 100px;
+    }
+    #box__span3 {
+      background-color: greenyellow;
+      top: 200px;
+      left: 164px;
+    }
+    #box__span4 {
+      background-color: violet;
+      top: 260px;
+      left: 233px;
+    }
+    .box:hover {
+      z-index: 5;
+      height: 80px;
+      transform: translate(20px, -20px);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box" id="box__span1">
+        Box 1
+        <p>aaaaaaaaaa</p>
+      </div>
+      <div class="box" id="box__span2">
+        Box 2
+        <p>bbbbbbbbbb</p>
+      </div>
+      <div class="box" id="box__span3">
+        Box 3
+        <p>cccccccccccc</p>
+      </div>
+      <div class="box" id="box__span4">
+        Box 4
+        <p>ddddddddddd</p>
+      </div>
+    </div>
+  </body>
+</html>

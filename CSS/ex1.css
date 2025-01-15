@@ -1,0 +1,17 @@
+.container{
+    height: 300px;
+    width: 500px;
+    overflow: scroll;
+    padding-left: 150px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    color: white;
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    text-align:center;
+   
+}

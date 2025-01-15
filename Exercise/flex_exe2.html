@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 0 auto;
+      width: 90vw;
+      height: 100vh;
+      flex-wrap: wrap;
+      background-color: wheat;
+      display: flex;
+      gap: 5px;
+    }
+    .item_1 {
+      width: 100%;
+      height: 20%;
+      background-color: black;
+      font-size: 30px;
+      color: white;
+
+      text-align: center;
+    }
+    .footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 60%;
+      gap: 10px;
+    }
+    .footer div {
+      flex: 30%;
+      font-size: 30px;
+      align-content: center;
+      text-align: center;
+      color: white;
+    }
+    .last {
+      display: flex;
+      flex-direction: row;
+      width: 66.66%;
+      flex-wrap: wrap;
+      height: 17%;
+      gap: 10px;
+    }
+    .last div {
+      flex: 30%;
+      font-size: 30px;
+      align-content: center;
+      text-align: center;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item_1">1</div>
+
+      <div class="footer">
+        <div class="item_2" style="background-color: aqua">2</div>
+        <div class="item_3" style="background-color: aquamarine">3</div>
+        <div class="item_4" style="background-color: blue">4</div>
+        <div class="item_5" style="background-color: violet">5</div>
+        <div class="item_6" style="background-color: gold">6</div>
+        <div class="item_7" style="background-color: brown">7</div>
+      </div>
+      <div class="last">
+        <div class="item_8" style="background-color: chartreuse">8</div>
+        <div class="item_9" style="background-color: black">9</div>
+      </div>
+    </div>
+  </body>
+</html>

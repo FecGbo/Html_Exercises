@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .f_container {
+        height: 100vh;
+        display: flex;
+      }
+      .f_box {
+        flex: 1;
+        display: flex;
+        background: red;
+        height: 100%;
+        margin: 3px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+      }
+      .right_box {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .right_box div {
+        /* width: calc(50% - 6px);
+        height: calc(50% - 6px); */
+        width: 48%;
+        height: 49.3%;
+        background: red;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        margin: 3px;
+      }
+      .s_container {
+        height: 100vh;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .s_box {
+        flex: 1;
+        display: flex;
+        background: violet;
+        height: 100%;
+        margin: 3px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f_container">
+      <div class="f_box">1</div>
+      <div class="right_box">
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+    <br />
+    <div class="s_container">
+      <div class="s_box">1</div>
+      <div class="right_box">
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

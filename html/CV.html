@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border-bottom: 1px solid gray;
+        padding: 15px 1%;
+      }
+      th {
+        background-color: green;
+        color: white;
+        padding: 15px 1%;
+        position: sticky;
+        top: 0;
+      }
+      table {
+        width: 100%;
+        height: auto;
+        border-spacing: 0;
+        position: relative;
+      }
+
+      h3 {
+        color: green;
+      }
+
+      thead {
+        text-align: left;
+      }
+      .header__info {
+        text-align: center;
+        position: sticky;
+        top: 0;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header__info">
+          <h1>John Doe</h1>
+          <p>
+            Email: Johndoe@email.com | Phone:(123) 456-7890 | Location: City,
+            Country
+          </p>
+        </div>
+        <h3>Professional Summary</h3>
+
+        <p
+          style="
+            text-align: justify;
+            border-bottom: 1px solid gray;
+            padding-bottom: 15px;
+          "
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
+          dolorem in incidunt ea aliquid hic itaque autem, exercitationem, quas
+          iusto quis rem, culpa reprehenderit nesciunt maxime totam expedita.
+          Pariatur, magni?Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Dignissimos quia laudantium quas qui ipsa. Provident itaque
+          culpa sed omnis molestiae dolorum saepe, sapiente ducimus, illo fugit
+          ad consequatur amet ea. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Neque reprehenderit cupiditate placeat facilis aut
+          culpa libero, ipsa, incidunt dolor eligendi dolorem sit quibusdam quia
+          nemo minus ipsum, nobis dolorum eos!
+        </p>
+      </header>
+      <h3>Professional Experience</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Company Name</th>
+            <th>Location</th>
+            <th>Dates</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Software Engineer</td>
+            <td>XYZ Corp</td>
+            <td>New YOrk,Usa</td>
+            <td>Jan 2020-Present</td>
+          </tr>
+          <tr>
+            <td>Software Engineer</td>
+            <td>XYZ Corp</td>
+            <td>New YOrk,Usa</td>
+            <td>Jan 2020-Present</td>
+          </tr>
+        </tbody>
+        <!-- <tfoot>
+          <tr>
+            <td><h3>Education</h3></td>
+          </tr>
+          
+        </tfoot> -->
+      </table>
+
+      <h3>Education</h3>
+      <table id="table2">
+        <tr>
+          <th>Degree</th>
+          <th>Institution</th>
+          <th>Location</th>
+          <th>Graduation Year</th>
+        </tr>
+        <tr>
+          <td>Bachelor of SCience</td>
+          <td>University of Techology</td>
+          <td>City, Country</td>
+          <td>2017</td>
+        </tr>
+      </table>
+      <br />
+      <h3>Skills</h3>
+
+      <table id="table3">
+        <tbody>
+          <tr>
+            <td>HTML, CSS, JavaScript</td>
+          </tr>
+          <tr>
+            <td>React, Node.js, Express</td>
+          </tr>
+          <tr>
+            <td>Python, Django</td>
+          </tr>
+          <tr>
+            <td>SQL, MongoDB</td>
+          </tr>
+          <tr>
+            <td>Git, Docker, Kubernetes</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <h3>Certifications</h3>
+
+      <table id="table4">
+        <tr>
+          <td>Certified Scrum Master</td>
+          <td>Scrum Alliance</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>AWS Certified Solution Architect</td>
+          <td>Amazon Web Services</td>
+          <td>2021</td>
+        </tr>
+      </table>
+      <br />
+      <h3>COntact Information</h3>
+      <table id="table5">
+        <tr>
+          <td>Email: Johndoe@email.com</td>
+        </tr>
+        <tr>
+          <td>Phone: (123) 456-7890</td>
+        </tr>
+        <tr>
+          <td>LinkedIn: linkedin.com/in/johndoe</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

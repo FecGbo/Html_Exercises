@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .img_container {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    img {
+      height: 300px;
+      object-fit: cover;
+    }
+    .clearfix {
+      overflow: auto;
+    }
+    .box {
+      float: left;
+      width: 33.33%;
+      padding: 50px;
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <h1>Grid of Boxes</h1>
+    <p>Float Boxes side by side:</p>
+    <div class="clearfix">
+      <div class="img_container">
+        <img src="../images/Chat.jpg" alt="" width="100%" />
+      </div>
+      <div class="img_container">
+        <img src="../images/sideEyeCat.jpg" alt="" width="100%" />
+      </div>
+      <div class="img_container">
+        <img src="../images/cat.jpg" alt="" width="100%" />
+      </div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam hic
+      sapiente eligendi tenetur, ex amet suscipit repellendus possimus numquam
+      et autem sequi eos, nemo recusandae illo maiores aliquid similique.
+      Quisquam?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Necessitatibus, iusto! Voluptatibus quidem sed voluptate assumenda unde in
+      ipsum ipsa nihil earum perspiciatis asperiores, consectetur sunt alias
+      reprehenderit nobis modi adipisci.
+    </p>
+    <div class="container">
+      <div class="box" style="background-color: red">
+        <p>Box 1</p>
+      </div>
+      <div class="box" style="background-color: pink">
+        <p>Box 2</p>
+      </div>
+      <div class="box" style="background-color: blue">
+        <p>Box 3</p>
+      </div>
+    </div>
+  </body>
+</html>

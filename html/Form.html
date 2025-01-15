@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Exercises</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+
+      .main-form {
+        display: flex;
+        justify-content: center;
+        margin: 300px;
+
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: aqua;
+        width: 600px;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .form-control {
+        display: flex;
+        justify-content: space-between;
+      }
+      input {
+        width: 200px;
+        height: 20px;
+      }
+      .form-button {
+        float: right;
+      }
+      .radio-btn {
+        display: flex;
+        /* gap: 10px; */
+        width: 50%;
+      }
+      .btn-control {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-form">
+      <form class="form">
+        <!-- Name -->
+        <div class="form-control">
+          <input type="hidden" name="" id="id" value="55" />
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value=""
+            required
+            placeholder="Please Enter Your Name!"
+          />
+        </div>
+
+        <div class="form-control">
+          <!-- Age -->
+          <label for="age">Age:</label>
+          <input type="number" id="age" />
+        </div>
+
+        <div class="form-control">
+          <div>
+            <!-- Gender -->
+            <label for="">Gender: </label>
+          </div>
+          <div class="radio-btn">
+            <label for="">Male</label>
+            <!-- Gender -->
+            <input type="radio" name="gender" id="" value="Male" checked />
+            <label for="">Female</label>
+            <input type="radio" name="gender" value="Female" />
+          </div>
+        </div>
+
+        <div class="form-control">
+          <!-- Email -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value=""
+            placeholder="example@gmail.com"
+          />
+        </div>
+
+        <div class="form-control">
+          <!-- Password -->
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+        </div>
+
+        <div class="form-control">
+          <!-- Address  -->
+          <label for="">Address:</label>
+          <textarea
+            name=""
+            id=""
+            rows="5"
+            cols="25"
+            placeholder="Please Enter your address...."
+          ></textarea>
+        </div>
+
+        <div class="form-control">
+          <!-- Upload File -->
+          <label for="">Upload File :</label>
+          <input type="file" name="fileupload" />
+        </div>
+        <div class="form-control">
+          Accept Terms and Condition :
+          <input type="checkbox" name="accept" value="accept" />
+        </div>
+
+        <div class="btn-control">
+          <button type="submit">Save Data</button>
+        </div>
+
+        <!-- <input type="text" name="" id="" value="Hi! THis is Readonly text box" readonly><br>
+
+            <input type="text" name="" id="" value="Disable text" disabled /> -->
+      </form>
+    </div>
+  </body>
+</html>

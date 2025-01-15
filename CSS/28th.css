@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+}
+.container{
+    position: relative;
+    background: rgb(34,193,195);
+background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(152,41,185,1) 36%, rgba(253,187,45,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(152,41,185,1) 36%, rgba(253,187,45,1) 100%);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(152,41,185,1) 36%, rgba(253,187,45,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#fdbb2d",GradientType=1);
+border-radius:76px;
+height: 400px;
+padding: 3%;
+
+
+}
+body{
+    margin:20%;
+}
+.profile img{
+    border-radius: 50%;
+}
+.profile{
+    position: absolute;
+    padding: 20px;
+    background: black;
+    left: 10%;
+    top: 11%;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    width: 25%;
+    height: 70%;
+}
+ .name{
+    margin-top: 30px;
+    color: rgb(138, 43, 122);
+     
+}
+.profile p{
+    margin: 20%;
+}
+.details{
+    position: absolute;
+    background: black;
+    top: 11%;
+    right:8% ;
+    color: white;
+    border-radius: 20px;
+    width:auto;
+    height: 79%;
+}
+tbody{
+    text-align: left;
+}
+thead{
+    text-align: center;
+     
+   
+}
+table{
+    padding: 40px;
+    border-spacing: 15px;
+    
+}
+.details p{
+    text-align: center;
+}
+heart{
+    color: red;
+}

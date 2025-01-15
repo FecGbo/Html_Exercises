@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        align-content: center;
+      }
+      .container > div {
+        text-align: center;
+        border: 1px solid;
+        height: 100px;
+        align-content: center;
+        font-size: 30px;
+      }
+      .item0 {
+        grid-column: 1 / span 4;
+      }
+      .item1 {
+        grid-column: 1 / span 2;
+      }
+      .item2 {
+        grid-column: 3 / span 2;
+      }
+      .item7 {
+        grid-column: 1 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item0" style="background-color: rebeccapurple">0</div>
+      <div class="item1" style="background-color: red">1</div>
+      <div class="item2" style="background-color: gold">2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div class="item7" style="background-color: gold">7</div>
+      <div>8</div>
+      <div>9</div>
+      <div class="item" style="background-color: rebeccapurple">O1</div>
+      <div class="item" style="background-color: red">O2</div>
+      <div class="item" style="background-color: gold">O3</div>
+      <div>O4</div>
+    </div>
+  </body>
+</html>

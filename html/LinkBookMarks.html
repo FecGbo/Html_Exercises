@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LInk Bookmark</title>
+</head>
+<body>
+    <div>
+        <a href="#ch1">Charpter 1</a> || <a href="#ch2">Charpter 2</a> || <a href="ch3">Chapter 3</a>
+     
+    </div>
+    <div id="ch1">
+        <h1>Chapter 1</h1>
+        In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wiIn this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+        
+
+    </div>
+    <div id="ch2">
+        <h1>Chapter 2</h1>
+        In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wiIn this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+        
+
+    </div>
+    <div id="ch3">
+        <h1>Chapter 3</h1>
+        In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wiIn this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+In this second edition of the book John joins Ian as a co-author. We have both had long careers in
+the world of game AI, but two memories that stand out from Ian’s career provide the philosophical
+underpinnings for the book.
+The first memory takes place in a dingy computer lab on the top floor of the computer
+science building at Birmingham University in the UK. Ian was halfway through the first year of his
+Artificial Intelligence degree, and he had only been in the department for a couple of weeks after
+transferring from a Mathematics major. Catching up on a semester of work was, unexpectedly,
+great fun, and a great bunch of fellow students was eager to help him learn about Expert Systems,
+Natural Language Processing, Philosophy of Mind, and the Prolog programming language.
+One of his fellow students had written a simple text-based adventure game in Prolog. Ian
+was not new to game programming—he was part of the 8-bit bedroom coding scene through his
+teenage years, and by this time had written more than ten games himself. But this simple game
+completely captivated him. It was the first time he’d seen a finite state machine (FSM) in action.
+There was an Ogre, who could be asleep, dozing, distracted, or angry. And you could control his
+emotions through hiding, playing a flute, or stealing his dinner.
+All thoughts of assignment deadlines were thrown to the wind, and a day later Ian had his
+own game in C written with this new technique. It was a mind-altering experience, taking him to
+an entirely new understanding of what was possible. The enemies he’d always coded were stuck
+following fixed paths or waited until the player came close before homing right in. In the FSM
+he saw the prospect of modeling complex emotional states, triggers, and behaviors. And he knew
+Game AI was what he wanted to do.
+Ian’s second memory is more than ten years later. Using some technology developed to simulate
+military tactics, he had founded a company called Mindlathe, dedicated to providing artificial
+intelligence middleware to games and other real-time applications. It was more than two years
+into development, and the company was well into the process of converting prototypes and legacy
+code into a robust AI engine. Ian was working on the steering system, producing a formation
+motion plug-in.
+On screen he had a team of eight robots wandering through a landscape of trees. Using
+techniques in this book, they stayed roughly in formation while avoiding collisions and taking
+the easiest route through more difficult terrain. The idea occurred to Ian to combine this with
+an existing demo they had of characters using safe tactical locations to hide in. With a few lines
+of code he had the formation locked to tactical locations. Rather than robots trying to stay in a
+xxi
+xxii Preface
+V formation, they tried to stick to safe locations, moving forward only if they would otherwise get
+left behind. Immediately the result was striking: the robots dashed between cover points, moving
+one at a time, so the whole group made steady progress through the forest, but each individual
+stayed in cover as long as possible.
+The memory persists, not because of that idea, but because it was the fastest and most striking
+example of something we will see many times in this book: that incredibly realistic results can be
+gained from intelligently combining very simple algorithms.
+Both memories, along with our many years of experience have taught us that, wi
+        
+
+    </div>
+
+</body>
+</html>

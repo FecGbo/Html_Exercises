@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      ul li {
+        display: inline-block;
+      }
+      a {
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        margin-right: 30px;
+      }
+      a:hover {
+        border: 1px solid;
+        border-radius: 5px;
+        color: aqua;
+      }
+      .nav {
+        padding: 15px;
+        background-color: black;
+        text-align: center;
+      }
+      .container img {
+        position: relative;
+      }
+      /* .container h1 {
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      } */
+
+      .container button {
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+
+        background-color: red;
+        width: 150px;
+      }
+      .welcome {
+        position: absolute;
+        color: white;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .container button:hover {
+        background-color: aqua;
+      }
+      .cart {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .box p {
+        padding: 15px;
+        text-align: justify;
+      }
+      .cart .box h2 {
+        text-align: center;
+      }
+      .box img {
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      /* Footer  */
+      .footer {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+      }
+      .background {
+        position: relative;
+        background: rgba(0, 0, 0, 1);
+      }
+      .form_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      /* .form_input {
+        display: inline-block;
+      } */
+      .footer_header {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+      .form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+
+        margin-top: 20px;
+      }
+      /* .form_input {
+        border: none;
+        border-bottom: 2px solid white;
+      } */
+      .form_input {
+        width: 100%;
+        padding: 0px 20px;
+        margin: 13px 0;
+        box-sizing: border-box;
+        border: none;
+        background: none;
+        border-bottom: 2px solid red;
+      }
+      /* Button */
+      /* .footer button {
+        margin-left: 45%;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 30%;
+        color: white;
+        background: none;
+      } */
+      .Submit {
+        margin-left: 35%;
+        margin-top: 10px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 20px;
+        background: none;
+        color: white;
+        border: 1px solid white;
+      }
+      /* Cart HOver */
+      /* .cart img:hover {
+        opacity: 0;
+      } */
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 59%;
+        width: 100%;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.25);
+      }
+      .box:hover .overlay {
+        opacity: 1;
+      }
+      /* .box img {
+        position: relative;
+      } */
+      .box {
+        margin: 10px 20px;
+        padding: 10px;
+        position: relative;
+        width: 27%;
+        display: inline-block;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <img src="../images/walls.jpg" alt="" width="100%" height="550px" />
+      <div class="welcome">
+        <h1>Welcome to Our Website</h1>
+        <p>Your Journey Starts Here</p>
+        <button type="button">Explore Now</button>
+      </div>
+    </div>
+    <div class="cart">
+      <div class="box" id="box_1">
+        <img src="../images/54.jpg" alt="" width="100%" height="" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste earum
+          soluta odit sapiente dolore! Aspernatur quo aut reprehenderit
+          reiciendis ullam impedit dolore facere modi velit! Ducimus voluptas
+          nam vel obcaecati.
+        </p>
+        <div class="overlay">
+          <div class="text">Item 1</div>
+        </div>
+      </div>
+      <div class="box" id="box_2">
+        <img src="../images/54.jpg" alt="" width="100%" height="" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste earum
+          soluta odit sapiente dolore! Aspernatur quo aut reprehenderit
+          reiciendis ullam impedit dolore facere modi velit! Ducimus voluptas
+          nam vel obcaecati.
+        </p>
+      </div>
+      <div class="box" id="box_3">
+        <img src="../images/54.jpg" alt="" width="100%" height="" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste earum
+          soluta odit sapiente dolore! Aspernatur quo aut reprehenderit
+          reiciendis ullam impedit dolore facere modi velit! Ducimus voluptas
+          nam vel obcaecati.
+        </p>
+      </div>
+      <div class="box" id="box_4">
+        <img src="../images/54.jpg" alt="" width="100%" height="" />
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste earum
+          soluta odit sapiente dolore! Aspernatur quo aut reprehenderit
+          reiciendis ullam impedit dolore facere modi velit! Ducimus voluptas
+          nam vel obcaecati.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="background">
+        <img src="../images/footerwall.jpg" alt="" width="100%" />
+      </div>
+      <div class="footer_header">
+        <h1>Get in Touch</h1>
+        <h3>Stay in Touch for more information</h3>
+      </div>
+
+      <form action="" class="form">
+        <!-- <img src="../images/footerwall.jpg" alt="" width="100%" class="form_img">      -->
+        <label for="name" class="form_label">Name </label>
+        <input type="text" class="form_input" id="name" />
+
+        <label for="phone" class="form_label">Phone </label>
+        <input type="tel" class="form_input" id="phone" />
+
+        <label for="email" class="form_label">Email </label>
+        <input type="email" class="form_input" id="email" />
+
+        <!-- <button type="button">Submit</button> -->
+        <input type="submit" value="Submit" class="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

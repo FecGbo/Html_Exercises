@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        height: 100vh;
+        margin: 0 auto;
+        gap: 5px;
+      }
+      .left {
+        flex: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .right {
+        flex: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .fst_row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 40%;
+        gap: 5px;
+      }
+      .fst_row .col_o {
+        width: 66.66%;
+        height: 100%;
+      }
+      .fst_row .col_tw {
+        width: 33.33%;
+        height: 100%;
+      }
+      .snd_row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 30%;
+        gap: 5px;
+      }
+      .snd_row .col_o {
+        width: 33.33%;
+        height: 100%;
+      }
+      .snd_row .col_tw {
+        width: 33.33%;
+        height: 100%;
+      }
+      .snd_row .col_th {
+        width: 33.33%;
+        height: 100%;
+      }
+      .trd_row {
+        display: flex;
+        width: 100%;
+        height: 30%;
+        background-color: aliceblue;
+        gap: 5px;
+      }
+      .trd_row .col_o {
+        width: 66.66%;
+        height: 100%;
+        background-color: brown;
+      }
+      .trd_row .col_tw {
+        width: 33.33%;
+        height: 100%;
+        background-color: greenyellow;
+      }
+
+      .right .fst_row {
+        width: 100%;
+        height: 71%;
+        background-color: aqua;
+        gap: 5px;
+      }
+      .right .snd_row {
+        width: 100%;
+        height: 30%;
+        background-color: gold;
+        gap: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="fst_row">
+          <div class="col_o" style="background-color: greenyellow"></div>
+          <div class="col_tw" style="background-color: aquamarine"></div>
+        </div>
+        <div class="snd_row">
+          <div class="col_o" style="background-color: blueviolet"></div>
+          <div class="col_tw" style="background-color: cornflowerblue"></div>
+          <div class="col_th" style="background-color: gold"></div>
+        </div>
+        <div class="trd_row">
+          <div class="col_o"></div>
+          <div class="col_tw"></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="fst_row"></div>
+        <div class="snd_row"></div>
+      </div>
+    </div>
+  </body>
+</html>

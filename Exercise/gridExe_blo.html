@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .header {
+        display: grid;
+        grid-template-columns: 60% auto;
+        background-color: black;
+        color: white;
+        padding: 20px 50px;
+        justify-content: space-around;
+      }
+
+      .nav ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        list-style-type: none;
+        gap: 33px;
+        /* justify-align:start;
+        gap:45px; */
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        color: aqua;
+      }
+      /*  main  */
+      .welcome {
+        position: absolute;
+
+        padding: 15px;
+        color: violet;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .welcome h1 {
+        background-color: black;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .welcome p {
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .main {
+        position: relative;
+        background-image: url("../images/sideEyeCat.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <p>BRAND</p>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="welcome">
+        <h1>Welcome To My Website</h1>
+
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, illum
+          itis molestias vitae architecto, quasi voluptatem
+        </p>
+      </div>
+    </div>
+    <div class="content"></div>
+  </body>
+</html>

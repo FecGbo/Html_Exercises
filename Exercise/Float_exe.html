@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: blueviolet;
+      }
+      .header,
+      .footer {
+        background: gray;
+        color: white;
+        padding: 15px;
+      }
+
+      .column_menu ul {
+        list-style-type: none;
+      }
+      .column_menu li {
+        margin-bottom: 8px;
+        padding: 8px;
+        background: blue;
+        color: white;
+      }
+
+      .column_menu {
+        float: left;
+        padding: 15px;
+        width: 15%;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .column_content {
+        width: 75%;
+      }
+      .column_menu li:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Chania</h1>
+    </div>
+
+    <div class="clearfix">
+      <div class="column_menu">
+        <ul>
+          <li>The Flight</li>
+          <li>The City</li>
+          <li>The Island</li>
+          <li>The Food</li>
+        </ul>
+      </div>
+
+      <div class="column_content">
+        <h1>The City</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+          voluptates obcaecati dignissimos aperiam vel reprehenderit expedita
+          commodi aliquam cumque et, odit quam ex porro doloremque recusandae
+          ullam? Laboriosam, aspernatur esse!loreml Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Quas magni soluta sequi repellat
+          eveniet, ea fuga est rerum, maxime odio optio vero expedita
+          dignissimos impedit harum inventore doloremque sed totam?
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+          cupiditate vel et voluptas qui, vitae animi molestiae dolorem,
+          molestias dicta quisquam hic maiores. Porro sint a dolorum illum
+          ducimus optio. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Sed aliquid optio, quidem, inventore in aperiam repudiandae
+          minima assumenda hic sunt error beatae deserunt expedita quos fugiat,
+          necessitatibus iste non velit.
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Ended</p>
+    </div>
+  </body>
+</html>

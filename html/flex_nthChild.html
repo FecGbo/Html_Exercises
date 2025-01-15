@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        background: cyan;
+        height: 200px;
+        width: 100%;
+        flex-direction: row;
+      }
+      .flex {
+        background-color: red;
+        flex-basis: 20%;
+        width: 100px;
+        margin: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      /* Reorder .flex items using the order property */
+      .flex:nth-child(1) {
+        order: 2;
+      }
+      .flex:nth-child(2) {
+        order: 3;
+      }
+      .flex:nth-child(3) {
+        order: 1;
+      }
+      .flex:nth-child(4) {
+        order: 5;
+      }
+      .flex:nth-child(5) {
+        order: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex" style="flex-basis: 50%">column 1</div>
+      <div class="flex" style="flex: 0 0 300px">column 2</div>
+      <div class="flex" style="align-self: flex-start">column 3</div>
+      <div class="flex">column 4</div>
+      <div class="flex">column 5</div>
+      <!-- <div class="flex">column 6</div> -->
+    </div>
+  </body>
+</html>

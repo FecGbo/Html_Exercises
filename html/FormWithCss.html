@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form With CSS</title>
+  </head>
+  <style>
+    /* block */
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px;
+    }
+    /* Elment */
+    .form__label {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .form__input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .form__submit {
+      background-color: red;
+      color: aqua;
+      padding: 10px 20px;
+      border: none;
+      font-size: 18px;
+    }
+    .form__submit--disabled {
+      background-color: greenyellow;
+      cursor: not-allowed;
+    }
+  </style>
+  <body>
+    <form action="" class="form">
+      <label for="name" class="form__label">Name: </label>
+      <input
+        type="text"
+        class="form__input"
+        id="name"
+        placeholder="Enter your name"
+      />
+
+      <!-- For Email -->
+      <label for="email" class="form__label">Email: </label>
+      <input
+        type="email"
+        class="form__input"
+        id="email"
+        placeholder="Enter your mail"
+      />
+
+      <!-- For Password -->
+      <label for="password" class="form__label">Password: </label>
+      <input
+        type="password"
+        name=""
+        id="password"
+        class="form__input"
+        placeholder="Enter your password"
+      />
+
+      <!-- For Button -->
+      <button
+        class="form__submit form__submit--disabled"
+        type="submit"
+        disabled
+      >
+        Sign Up
+      </button>
+    </form>
+  </body>
+</html>
